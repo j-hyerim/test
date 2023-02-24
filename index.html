@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css.css" type="text/css">
+    <script src="./js/js.js" type="text/javascript" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        div{
+            width: 150px;
+            height: 60px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.5s;
+            border:1px solid #333;
+        }
+        div:hover{
+            background: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>안녕 난 android / ios 구별 script 입니당</h1>
+
+    
+<pre>
+    너의 디바이스가 android 인지 ios 인지 알수있어요
+</pre>
+    <div>test button</div>
+    <script>
+		document.write("현재 사용 중인 브라우저의 이름은 " + navigator.appName + "입니다.<br>");
+		document.write("또한, 해당 브라우저의 코드명은 " + navigator.appCodeName + "입니다.");
+        document.write("현재 사용 중인 브라우저의 버전 정보는 " + navigator.appVersion + "입니다.<br><br>");
+        document.write("userAgent 프로퍼티로 알 수 있는 추가 정보는 " + navigator.userAgent + "입니다.");
+
+        $(document).ready(function(){
+
+            var varUA = navigator.userAgent.toLowerCase();
+            
+            if ( varUA.indexOf('android') > -1) {
+                console.log("android");
+                return "android";
+            } else if ( varUA.indexOf("iphone") > -1||varUA.indexOf("ipad") > -1||varUA.indexOf("ipod") > -1 ) {
+                console.log("ios");
+                return "ios";
+            } else {
+                alert("컴퓨터주제에");
+            }
+                
+        });
+
+
+   
+	</script>
+</body>
+</html>
